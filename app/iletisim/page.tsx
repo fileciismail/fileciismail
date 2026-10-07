@@ -49,12 +49,6 @@ export default function IletisimPage() {
               Haritada aç →
             </a>
           </li>
-          <li className="rounded-2xl border border-line bg-white px-5 py-4">
-            <p className="text-xs uppercase tracking-[0.18em] text-muted">
-              Bölge
-            </p>
-            <p className="mt-1 font-semibold text-forest">{site.region}</p>
-          </li>
         </ul>
         <div className="overflow-hidden rounded-2xl border border-line">
           <iframe
