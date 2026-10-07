@@ -58,8 +58,103 @@ export function telLink() {
 export const nav = [
   { href: "/", label: "Ana Sayfa" },
   { href: "/hizmetler", label: "Hizmetler" },
+  { href: "/katalog", label: "Katalog" },
+  { href: "/sertifikalar", label: "Sertifikalarımız" },
   { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/iletisim", label: "İletişim" },
+];
+
+export const catalog = [
+  {
+    id: "1",
+    title: "4 cm göz · 1 mm iplik",
+    mesh: "4 cm",
+    thread: "1 mm",
+    color: "Beyaz",
+    image: "/katalog/1.png",
+    use: "İnce görünüm, balkon ve kuş filesi uygulamaları.",
+  },
+  {
+    id: "2",
+    title: "5 cm göz · 6 mm iplik",
+    mesh: "5 cm",
+    thread: "6 mm",
+    color: "Beyaz",
+    image: "/katalog/2.png",
+    use: "Kalın iplik, halı saha ve yüksek darbe alanları.",
+  },
+  {
+    id: "3",
+    title: "2 cm göz · 2 mm iplik",
+    mesh: "2 cm",
+    thread: "2 mm",
+    color: "Beyaz",
+    image: "/katalog/3.png",
+    use: "Sık göz, kuş ve kedi güvenliği için.",
+  },
+  {
+    id: "4",
+    title: "10 cm göz · 6 mm iplik",
+    mesh: "10 cm",
+    thread: "6 mm",
+    color: "Beyaz",
+    image: "/katalog/4.png",
+    use: "Geniş göz, spor sahası ve çevre filesi.",
+  },
+  {
+    id: "5",
+    title: "4 cm göz · 4 mm iplik",
+    mesh: "4 cm",
+    thread: "4 mm",
+    color: "Beyaz",
+    image: "/katalog/5.png",
+    use: "Orta kalınlık, balkon ve merdiven boşluğu.",
+  },
+  {
+    id: "6",
+    title: "4 cm göz · 2 mm iplik",
+    mesh: "4 cm",
+    thread: "2 mm",
+    color: "Beyaz",
+    image: "/katalog/6.png",
+    use: "Dengeli göz ve iplik, genel güvenlik filesi.",
+  },
+  {
+    id: "7",
+    title: "12 cm göz · 3 mm iplik",
+    mesh: "12 cm",
+    thread: "3 mm",
+    color: "Beyaz",
+    image: "/katalog/7.png",
+    use: "Geniş göz, inşaat ve saha çevre filesi.",
+  },
+];
+
+export const certificates = [
+  {
+    id: "1",
+    title: "ISO 45001:2018",
+    summary: "İş Sağlığı ve Güvenliği Yönetim Sistemi",
+    image: "/sertifikalar/1.png",
+  },
+  {
+    id: "2",
+    title: "ISO 9001:2015",
+    summary: "Kalite Yönetim Sistemi",
+    image: "/sertifikalar/2.png",
+  },
+  {
+    id: "3",
+    title: "ISO 14001:2015",
+    summary: "Çevre Yönetim Sistemi",
+    image: "/sertifikalar/3.png",
+  },
+  {
+    id: "4",
+    title: "CE Sertifikası",
+    summary: "Güvenlik ağı uygunluk beyanı",
+    image: "/sertifikalar/4.png",
+  },
 ];
 
 export type Service = {

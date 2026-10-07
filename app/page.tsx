@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ServiceCard } from "@/components/ServiceCard";
 import {
+  catalog,
+  certificates,
   districts,
   faqs,
   reasons,
@@ -139,6 +141,53 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-t border-line bg-sand">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+          <div className="flex max-w-2xl flex-col gap-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-moss">
+              Katalog
+            </p>
+            <h2 className="font-display text-3xl tracking-tight text-forest sm:text-4xl">
+              Göz aralığı ve iplik kalınlığına göre modeller.
+            </h2>
+            <p className="text-sm text-muted sm:text-base">
+              Kendi üretimimiz. Beyaz güvenlik filesi, yedi standart ölçüde.
+            </p>
+          </div>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {catalog.map((item) => (
+              <Link
+                key={item.id}
+                href="/katalog"
+                className="overflow-hidden rounded-3xl border border-line bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-gold/40"
+              >
+                <div className="relative aspect-square bg-ink">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-display text-lg text-forest">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-xs text-muted">{item.use}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <Link
+            href="/katalog"
+            className="mt-8 inline-flex min-h-12 items-center text-sm font-semibold text-moss hover:text-gold"
+          >
+            Tüm kataloğu gör →
+          </Link>
+        </div>
+      </section>
+
       <section className="bg-forest text-paper">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:gap-12 sm:px-6 sm:py-20 lg:grid-cols-2">
           <div>
@@ -235,6 +284,46 @@ export default function Home() {
               <p className="mt-3 text-sm leading-relaxed text-muted">{item.a}</p>
             </details>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-sand">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-moss">
+            Belgeler
+          </p>
+          <h2 className="mt-3 font-display text-3xl tracking-tight text-forest sm:text-4xl">
+            Sertifikalarımız
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm text-muted sm:text-base">
+            ISO 9001, ISO 14001, ISO 45001 ve CE belgelerimiz. Detay için
+            belgeye tıklayın.
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {certificates.map((item) => (
+              <Link
+                key={item.id}
+                href="/sertifikalar"
+                className="overflow-hidden rounded-3xl border border-line bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-gold/40"
+              >
+                <div className="relative aspect-[3/4] bg-white">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-contain p-2"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
+                </div>
+                <div className="border-t border-line px-4 py-3">
+                  <h3 className="font-display text-base text-forest">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-xs text-muted">{item.summary}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -21,7 +21,7 @@ export function Header() {
         <div className="min-w-0 shrink">
           <Logo light />
         </div>
-        <nav className="hidden items-center gap-8 text-sm md:flex">
+        <nav className="hidden items-center gap-5 text-sm lg:flex">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -32,7 +32,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <a href={telLink()} className="text-sm text-gold-soft whitespace-nowrap">
             {site.phoneDisplay}
           </a>
@@ -43,7 +43,7 @@ export function Header() {
             Fiyat teklifi alın
           </a>
         </div>
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <a
             href={telLink()}
             className="grid h-11 w-11 place-items-center rounded-lg border border-white/15 text-gold-soft"
@@ -78,7 +78,7 @@ export function Header() {
         </div>
       </div>
       {open ? (
-        <div className="max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-t border-white/10 px-4 py-4 md:hidden">
+        <div className="max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-t border-white/10 px-4 py-4 lg:hidden">
           <nav className="flex flex-col gap-1 text-base">
             {nav.map((item) => (
               <Link
