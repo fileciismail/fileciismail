@@ -115,8 +115,6 @@ export default function Home() {
           <span>Yerinde ölçü</span>
           <span className="hidden text-gold sm:inline">◆</span>
           <span>Gergin montaj</span>
-          <span className="hidden text-gold sm:inline">◆</span>
-          <span>Kahramanmaraş ve çevre</span>
         </div>
       </section>
 
